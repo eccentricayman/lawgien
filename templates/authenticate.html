@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+      Login
+      {% if login %}
+      Sucess
+      {% else %}
+      Failed
+      {% endif %}
+      </title>
+  </head>
+  <body>
+    {% if login %}
+    <img src="static/happygenie.jpg">
+    {% else %}
+    <img src="static/sadgenie.jpg">
+    <br>
+    <a href="/" style="border-radius: 3px ; border: 2px solid black">
+      Try Again
+    </a>
+    {% endif %}
+  </body>
+  </html>
