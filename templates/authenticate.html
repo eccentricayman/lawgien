@@ -8,17 +8,23 @@
       {% else %}
       Failed
       {% endif %}
-      </title>
+    </title>
+    <link rel="stylesheet" type="text/css" href="static/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Raleway" rel="stylesheet">
   </head>
   <body>
-    {% if login %}
-    <img src="static/happygenie.jpg">
-    {% else %}
-    <img src="static/sadgenie.jpg">
-    <br>
-    <a href="/" style="border-radius: 3px ; border: 2px solid black">
-      Try Again
-    </a>
-    {% endif %}
+    <div style="padding-top: 5vh">
+      <h1>{{ message }}</h1>
+      {% if login %}
+      <img src="static/happygenie.jpg" style="width: auto ; height: 450px">
+      {% else %}
+      <img src="static/sadgenie.jpg">
+      <br>
+      <br>
+      <a href="/" id="button">
+        Try Again
+      </a>
+      {% endif %}
+    </div>
   </body>
   </html>

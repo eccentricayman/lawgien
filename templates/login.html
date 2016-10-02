@@ -1,18 +1,24 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Fancy L0gin</title>
+    <title>Genie's Friends</title>
+    <link rel="stylesheet" type="text/css" href="static/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Raleway" rel="stylesheet">
   </head>
   <body>
-    <h1><b>Say the magic word aladdin</b></h1>
     <div>
+      <h1> <b> {{ message }} </b> </h1>
       <form action="/authenticate" method="POST">
-        Username: <input type="text" name="username" value="">
+        Username
+        <br> 
+        <input id="textinput" type="text" name="username" value="">
         <br>
-        Password: <input type="password" name="passwd" value="">
+        Password
         <br>
+        <input id="passwordinput" type="password" name="passwd" value="">
         <br>
-        <input type="submit" value="Submit">
+        <input id="submitinput" type="submit" name="account" value="Login">
+        <input id="submitinput" type="submit" name="account" value="Register">
       </form>
       </div>
   </body>
