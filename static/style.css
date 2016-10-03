@@ -44,7 +44,9 @@ div {
 
 #submitinput:hover {
 	background-color: gray;
+	color: white;
 	transition: background-color 0.3s;
+	transition: color 0.3s;
 }
 
 #button {
@@ -58,5 +60,7 @@ div {
 
 #button:hover {
 	background-color: gray;
+	color: white;
 	transition: background-color 0.3s;
+	transition: color 0.3s;
 }
