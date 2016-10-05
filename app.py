@@ -22,7 +22,7 @@ def authenticate():
                 return render_template("login.html", message = "Genie says be more creative with usernames, that's taken already.")
         data.close()
         newacc = open("data/geniefriends.csv", "a")
-        row = hashlib.sha256(uname).hexdigest() + "," + hashlib.sha256(pword).digest()
+        row = hashlib.sha256(uname).hexdigest() + "," + hashlib.sha256(pword).digest() + "\n"
         newacc.write(row)
         newacc.close()
         return render_template("login.html", message = "Account created, genie is waiting for you to login.")
