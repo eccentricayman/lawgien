@@ -33,7 +33,7 @@ def authenticate():
                 return render_template("login.html", message = "Genie says be more creative with usernames, that's taken already.")
         data.close()
         newacc = open("data/geniefriends.csv", "a")
-        row = hashlib.sha256(uname).hexdigest() + "," + hashlib.sha256(pword).digest() + "\n"
+        row = hashlib.sha256(uname).hexdigest() + "," + hashlib.sha256(pword).hexdigest() + "\n"
         newacc.write(row)
         newacc.close()
         return render_template("login.html", message = "Account created, genie is waiting for you to login.")
@@ -42,7 +42,7 @@ def authenticate():
         accounts = csv.reader(data)
         for account in accounts:
             if account[0] == hashlib.sha256(uname).hexdigest():
-                if account[1] == hashlib.sha256(pword).digest():
+                if account[1] == hashlib.sha256(pword).hexdigest():
                     data.close()
                     session['logged_in'] = True
                     session['username'] = uname
